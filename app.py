@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 from pymongo import MongoClient
 
-client = MongoClient('localhost', 27017)
+client = MongoClient('mongo', 27017) # localhost 를 docker 로 만든 network , mongo 로 사용
 db = client.dbsparta
 
 
