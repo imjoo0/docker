@@ -1,8 +1,11 @@
-FROM python:3.10
+FROM python:3.10-slim AS builder
 
-ADD requirements.txt .
+ADD requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt
+
+FROM python:3.10-slim-buster
+COPY --from=builder /usr/local/lib/python3.8/site-packages /usr/local/lib/python3.8/site-packages
 
 ADD templates templates
 
