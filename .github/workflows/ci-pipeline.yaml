@@ -34,7 +34,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-memo
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-memo:latest
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
