@@ -2,7 +2,7 @@ name: github-actions
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   python-hello-world:
     runs-on: ubuntu-latest
